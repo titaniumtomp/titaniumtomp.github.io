@@ -7,6 +7,7 @@ main{max-width:520px;margin:0 auto;padding:40px 18px 60px}
 header{text-align:center;margin-bottom:28px}.av{width:84px;height:84px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;font-size:42px;background:#1a1d26;border:2px solid var(--acc);box-shadow:0 0 28px #ffd23f55}
 h1{margin:0;font-size:30px}p.tag{color:var(--mut);margin:8px 0 0}
 h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin:28px 4px 10px}
+h2 .n{display:inline-block;margin-left:8px;padding:1px 8px;border-radius:10px;background:rgba(255,255,255,.1);color:#fff;font-size:11px;letter-spacing:0;vertical-align:1px}
 a.c{display:flex;gap:14px;align-items:center;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin-bottom:10px;transition:.15s}
 a.c:hover,a.c:focus{border-color:var(--acc);transform:translateY(-1px);box-shadow:0 4px 20px #ffd23f22}
 .i{font-size:26px;width:36px;text-align:center;flex:none}.t{font-weight:600}.d{color:var(--mut);font-size:14px}.ar{margin-left:auto;color:var(--acc)}
@@ -31,4 +32,4 @@ footer{text-align:center;color:var(--mut);font-size:13px;margin-top:30px}
 <a class="c" href="https://ts.la/thomas59223"><span class="i">⚡️</span><span><div class="t">Tesla referral</div><div class="d">Buying a Tesla? Use my link</div></span><span class="ar">→</span></a>
 <a class="c" href="https://x.com/TitaniumTomP"><span class="i">𝕏</span><span><div class="t">@TitaniumTomP</div><div class="d">Follow along on X</div></span><span class="ar">→</span></a>
 <footer>Software architect · Father · Husband · Musician · Stamford, CT</footer>
-</main></body></html>
+</main><script>document.querySelectorAll("h2").forEach(h=>{let n=0,e=h.nextElementSibling;while(e&&e.tagName!=="H2"){if(e.matches("a.c"))n++;e=e.nextElementSibling}const s=document.createElement("span");s.className="n";s.textContent=n;h.appendChild(s)})</script></body></html>
