@@ -5,176 +5,246 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<title>America Party Officers · Chat Recap | Tom ⚡️</title>
-<meta name="description" content="Live recap from the America Party Officers X Chat group — summary, charts, and imagery from Thu Nov 5, 2026.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>America Party · Officers Recap | Tom ⚡️</title>
+<meta name="description" content="America Party Officers X Chat recap — platform draft, conversation summary, charts, and branding imagery from Thu Nov 5, 2026.">
 <style>
 :root{
-  --bg:#07080c;--card:rgba(255,255,255,.035);--line:rgba(255,255,255,.08);
-  --txt:#e8ecf3;--mut:#9aa4b5;--acc:#ffd23f;--navy:#1e3a8a;--red:#c41e3a;--white:#f5f7fb;
+  --navy:#0a1628;
+  --navy-2:#0b1b33;
+  --navy-3:#12243f;
+  --ink:#e8eef7;
+  --muted:#9aabc2;
+  --white:#f7f9fc;
+  --red:#c41e3a;
+  --red-deep:#b91c1c;
+  --gold:#c9a84c;
+  --line:rgba(255,255,255,.1);
+  --card:#101f36;
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  margin:0;min-height:100vh;color:var(--txt);font:16px/1.55 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  background:var(--bg);position:relative;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  margin:0;min-height:100vh;color:var(--ink);
+  font:16.5px/1.6 var(--sans);
+  background:
+    linear-gradient(180deg,#07101c 0%,var(--navy) 28%,var(--navy-2) 100%);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
 body::before{
-  content:"";position:fixed;inset:-20%;z-index:-2;
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
   background:
-    radial-gradient(40% 35% at 50% 0%,#ffd23f28,transparent 70%),
-    radial-gradient(32% 28% at 88% 22%,#1e3a8a33,transparent 70%),
-    radial-gradient(30% 28% at 8% 70%,#c41e3a18,transparent 70%);
-  animation:drift 22s ease-in-out infinite alternate;
+    radial-gradient(55% 40% at 50% -8%,rgba(196,30,58,.18),transparent 70%),
+    radial-gradient(40% 30% at 92% 18%,rgba(201,168,76,.08),transparent 70%),
+    linear-gradient(90deg,transparent 0 48px,rgba(255,255,255,.015) 48px 49px,transparent 49px);
+  background-size:auto,auto,98px 100%;
 }
-body::after{
-  content:"";position:fixed;inset:0;z-index:-1;opacity:.45;
-  background-image:
-    radial-gradient(1px 1px at 12% 18%,#fff8,transparent),
-    radial-gradient(1px 1px at 72% 12%,#fff6,transparent),
-    radial-gradient(1.5px 1.5px at 34% 42%,#ffd23f88,transparent),
-    radial-gradient(1px 1px at 88% 56%,#fff6,transparent),
-    radial-gradient(1px 1px at 22% 78%,#fff5,transparent),
-    radial-gradient(1.5px 1.5px at 62% 88%,#ffd23f66,transparent);
-  animation:twinkle 6s ease-in-out infinite alternate;
-}
-@keyframes drift{to{transform:translate3d(3%,4%,0) scale(1.08)}}
-@keyframes twinkle{to{opacity:.8}}
-@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
 
+/* Sticky nav */
 .nav{
-  position:sticky;top:0;z-index:40;
-  display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;
-  padding:12px 18px;max-width:920px;margin:0 auto;
-  background:rgba(7,8,12,.78);border-bottom:1px solid rgba(255,255,255,.06);
-  backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);
+  position:sticky;top:0;z-index:50;
+  display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;
+  padding:10px 18px;max-width:1040px;margin:0 auto;
+  background:rgba(10,22,40,.92);
+  border-bottom:1px solid rgba(201,168,76,.22);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
 }
 .nav a{
-  color:var(--mut);text-decoration:none;font-size:13px;font-weight:500;
-  padding:6px 10px;border-radius:999px;border:1px solid transparent;transition:.2s;
+  color:var(--muted);font-size:13px;font-weight:600;letter-spacing:.02em;
+  padding:7px 11px;border-radius:6px;border:1px solid transparent;transition:.18s;
+  text-decoration:none;
 }
-.nav a:hover,.nav a:focus-visible{color:var(--txt);border-color:rgba(255,210,63,.45);background:#ffd23f12;outline:none}
-.nav .home{color:var(--acc);font-weight:600;border:1px solid #ffd23f40;background:#ffd23f12}
-.nav .home:hover{background:#ffd23f22;border-color:#ffd23f80}
-.nav .spacer{flex:1;min-width:8px}
+.nav a:hover,.nav a:focus-visible{color:var(--white);border-color:rgba(196,30,58,.45);background:rgba(196,30,58,.12);outline:none;text-decoration:none}
+.nav .home{
+  color:var(--white);font-weight:700;
+  border:1px solid rgba(201,168,76,.4);background:rgba(201,168,76,.08);
+}
+.nav .home:hover{background:rgba(201,168,76,.16);border-color:rgba(201,168,76,.7)}
+.nav .spacer{flex:1;min-width:6px}
 
-main{max-width:860px;margin:0 auto;padding:28px 20px 72px;position:relative;z-index:1}
+main{max-width:980px;margin:0 auto;padding:0 20px 80px;position:relative}
 
+/* Hero */
 .hero{
-  text-align:center;padding:28px 8px 8px;margin-bottom:8px;animation:up .7s ease both;
+  text-align:center;padding:36px 0 28px;border-bottom:1px solid rgba(201,168,76,.2);
+  margin-bottom:8px;
 }
-.badge{
-  display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;
-  padding:6px 14px;border-radius:999px;font-size:12px;letter-spacing:.06em;font-weight:600;
-  color:#e8ecf3;background:rgba(7,8,12,.5);border:1px solid rgba(255,210,63,.35);
+.hero-banner{
+  display:block;width:100%;max-width:900px;margin:0 auto 22px;
+  border-radius:4px;border:1px solid rgba(201,168,76,.35);
+  box-shadow:0 18px 50px rgba(0,0,0,.45);
 }
-.badge i{width:7px;height:7px;border-radius:50%;background:#c41e3a;box-shadow:0 0 8px #c41e3a}
+.hero-eagle{
+  width:min(220px,42vw);height:auto;margin:0 auto 18px;display:block;
+  border-radius:12px;border:2px solid rgba(201,168,76,.45);
+  box-shadow:0 12px 36px rgba(0,0,0,.4);
+}
 .stripe{
-  display:flex;height:4px;width:120px;margin:0 auto 20px;border-radius:999px;overflow:hidden;
-  box-shadow:0 0 18px #ffd23f33;
+  display:flex;height:5px;width:140px;margin:0 auto 18px;border-radius:999px;overflow:hidden;
 }
 .stripe span{flex:1}
 .stripe span:nth-child(1){background:#1e3a8a}
 .stripe span:nth-child(2){background:#f5f7fb}
-.stripe span:nth-child(3){background:#c41e3a}
+.stripe span:nth-child(3){background:var(--red)}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;
+  padding:6px 14px;border-radius:999px;font-size:11.5px;letter-spacing:.12em;
+  font-weight:700;text-transform:uppercase;color:var(--white);
+  background:rgba(196,30,58,.16);border:1px solid rgba(196,30,58,.45);
+}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red)}
 h1{
-  margin:0;font-size:clamp(1.85rem,5vw,2.55rem);font-weight:800;letter-spacing:-.03em;
-  background:linear-gradient(180deg,#fff,#d9dde6);-webkit-background-clip:text;background-clip:text;color:transparent;
-  filter:drop-shadow(0 2px 14px rgba(0,0,0,.85));
+  margin:0;font-family:var(--serif);font-weight:800;
+  font-size:clamp(2.1rem,5.5vw,3.15rem);letter-spacing:-.02em;line-height:1.12;
+  color:var(--white);
 }
-.sub{color:#aab3c2;margin:12px auto 0;max-width:540px;font-size:15.5px;line-height:1.55}
-.meta{
-  display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:18px;
+.hero .kicker{
+  margin:10px 0 0;font-family:var(--serif);font-style:italic;font-weight:600;
+  font-size:clamp(1.05rem,2.5vw,1.35rem);color:var(--gold);
 }
+.sub{color:var(--muted);margin:14px auto 0;max-width:560px;font-size:15.5px;line-height:1.55}
+.meta{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:20px}
 .chip{
-  font-size:12.5px;font-weight:500;color:#dfe4ec;
-  padding:7px 12px;border-radius:999px;
-  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+  font-size:12.5px;font-weight:600;color:var(--ink);
+  padding:7px 13px;border-radius:999px;
+  background:var(--navy-3);border:1px solid var(--line);
 }
-.chip strong{color:var(--acc);font-weight:700}
+.chip strong{color:var(--gold);font-weight:700}
 
-.card{
-  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));
+/* Sections */
+section.panel{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-left:4px solid var(--red);
+  border-radius:4px 14px 14px 4px;
+  padding:26px 26px 24px;margin:22px 0;
+  box-shadow:0 14px 40px rgba(0,0,0,.28);
+}
+section.panel h2{
+  margin:0 0 6px;font-family:var(--serif);font-size:1.55rem;font-weight:700;
+  color:var(--white);letter-spacing:-.01em;
+}
+.eyebrow{
+  display:block;font-size:11.5px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--red);margin:0 0 8px;
+}
+.panel p{margin:0 0 12px;color:var(--ink);font-size:15.5px}
+.panel p:last-child{margin-bottom:0}
+.panel p.mut{color:var(--muted);font-size:14.5px}
+.panel .lede{font-size:16px;line-height:1.65;color:#d5deeb}
+
+/* Notice */
+.notice{
+  margin:16px 0 0;padding:14px 16px;
+  background:rgba(196,30,58,.1);border:1px solid rgba(196,30,58,.35);
+  border-radius:8px;color:#f0d5da;font-size:14px;line-height:1.55;
+}
+.notice strong{color:#fff;font-weight:700}
+
+/* Platform planks */
+.planks{display:grid;gap:14px;margin-top:18px}
+.plank{
+  background:rgba(7,16,28,.55);
   border:1px solid rgba(255,255,255,.08);
-  backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
-  border-radius:22px;padding:24px;margin:18px 0;
-  box-shadow:0 10px 40px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.06);
-  animation:up .7s ease both;
+  border-top:2px solid rgba(201,168,76,.55);
+  border-radius:10px;padding:16px 18px;
 }
-.card:nth-of-type(1){animation-delay:.08s}
-.card:nth-of-type(2){animation-delay:.16s}
-.card:nth-of-type(3){animation-delay:.24s}
-.card:nth-of-type(4){animation-delay:.32s}
-.card:nth-of-type(5){animation-delay:.4s}
-.h{
-  font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--acc);margin:0 0 14px;
+.plank h3{
+  margin:0 0 10px;font-family:var(--serif);font-size:1.2rem;font-weight:700;
+  color:var(--white);
 }
-.card h2{margin:0 0 10px;font-size:1.15rem;letter-spacing:-.01em}
-.card p{margin:0 0 12px;color:#dfe4ec;font-size:15.5px;line-height:1.65}
-.card p:last-child{margin-bottom:0}
-.card p.mut{color:var(--mut);font-size:14px}
-ul.threads{list-style:none;padding:0;margin:8px 0 0}
+.plank .label{
+  display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gold);margin:0 0 4px;
+}
+.plank .core,.plank .wording{margin:0 0 10px;font-size:14.5px;line-height:1.55;color:#d5deeb}
+.plank .wording{margin-bottom:0;padding-top:8px;border-top:1px dashed rgba(255,255,255,.1)}
+.source-note{margin-top:16px;font-size:13.5px;color:var(--muted)}
+
+/* Threads */
+ul.threads{list-style:none;padding:0;margin:14px 0 0}
 ul.threads li{
-  margin:0 0 12px;padding:14px 16px;border-radius:14px;
-  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);
+  margin:0 0 12px;padding:14px 16px;border-radius:10px;
+  background:rgba(7,16,28,.5);border:1px solid rgba(255,255,255,.07);
+  border-left:3px solid var(--gold);
 }
 ul.threads li:last-child{margin-bottom:0}
-ul.threads strong{color:var(--acc);display:block;margin-bottom:4px;font-size:13.5px;letter-spacing:.02em}
-ul.threads span{color:#dfe4ec;font-size:14.5px;line-height:1.55;display:block}
-
-.charts{display:grid;gap:16px}
-.chart{
-  margin:0;padding:12px;border-radius:16px;
-  background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.06);
+ul.threads strong{
+  display:block;margin-bottom:4px;font-family:var(--serif);
+  font-size:1.05rem;color:var(--white);
 }
-.chart img{display:block;width:100%;height:auto;border-radius:10px}
-.chart figcaption{margin-top:10px;font-size:13px;color:var(--mut);text-align:center}
+ul.threads span{color:#d5deeb;font-size:14.5px;line-height:1.55;display:block}
 
+/* Charts */
+.charts{display:grid;gap:16px;margin-top:14px}
+@media (min-width:720px){
+  .charts.grid-2{grid-template-columns:1fr 1fr}
+  .charts.grid-2 .chart:last-child:nth-child(odd){grid-column:1/-1}
+}
+.chart{
+  margin:0;padding:12px;border-radius:10px;
+  background:rgba(7,16,28,.55);border:1px solid rgba(255,255,255,.08);
+}
+.chart img{display:block;width:100%;height:auto;border-radius:6px}
+.chart figcaption{margin-top:10px;font-size:13px;color:var(--muted);text-align:center}
+
+/* Gallery */
 .gallery{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:14px;
 }
 .gallery figure{
-  margin:0;border-radius:16px;overflow:hidden;
-  background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.07);
+  margin:0;border-radius:10px;overflow:hidden;
+  background:rgba(7,16,28,.55);border:1px solid rgba(255,255,255,.08);
   display:flex;flex-direction:column;
 }
-.gallery img{display:block;width:100%;height:220px;object-fit:contain;background:#10131b}
-.gallery figcaption{padding:12px 14px;font-size:12.5px;color:var(--mut);line-height:1.45}
-.gallery figcaption strong{display:block;color:var(--txt);font-size:13.5px;margin-bottom:2px}
+.gallery img{
+  display:block;width:100%;height:210px;object-fit:contain;background:#0a1424;
+}
+.gallery figure.wide img{height:auto;max-height:280px;object-fit:cover;width:100%}
+.gallery figcaption{padding:12px 14px;font-size:12.5px;color:var(--muted);line-height:1.45}
+.gallery figcaption strong{display:block;color:var(--white);font-size:13.5px;margin-bottom:2px;font-family:var(--serif)}
 
-ul.actions{list-style:none;padding:0;margin:0}
+/* Actions */
+ul.actions{list-style:none;padding:0;margin:12px 0 0}
 ul.actions li{
-  position:relative;padding:10px 12px 10px 34px;margin:0 0 8px;
-  border-radius:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);
-  color:#dfe4ec;font-size:14.5px;line-height:1.5;
+  position:relative;padding:11px 14px 11px 36px;margin:0 0 8px;
+  border-radius:8px;background:rgba(7,16,28,.5);border:1px solid rgba(255,255,255,.07);
+  color:#d5deeb;font-size:14.5px;line-height:1.5;
 }
 ul.actions li:last-child{margin-bottom:0}
 ul.actions li::before{
-  content:"";position:absolute;left:14px;top:16px;width:8px;height:8px;border-radius:50%;
-  background:var(--acc);box-shadow:0 0 10px #ffd23f88;
+  content:"";position:absolute;left:14px;top:17px;width:9px;height:9px;border-radius:50%;
+  background:var(--red);box-shadow:0 0 10px rgba(196,30,58,.7);
 }
 
 .dl{
-  display:inline-flex;align-items:center;gap:8px;margin-top:14px;
-  padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:600;font-size:14px;
-  color:var(--txt);background:rgba(255,210,63,.1);border:1px solid #ffd23f45;transition:.2s;
+  display:inline-flex;align-items:center;gap:8px;margin-top:16px;
+  padding:11px 18px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;
+  color:var(--white);background:var(--red-deep);border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 6px 20px rgba(185,28,28,.35);transition:.18s;
 }
-.dl:hover,.dl:focus-visible{background:rgba(255,210,63,.18);border-color:#ffd23f80;transform:translateY(-1px);outline:none}
+.dl:hover,.dl:focus-visible{
+  background:var(--red);transform:translateY(-1px);outline:none;text-decoration:none;
+}
 
 footer{
-  text-align:center;color:#7d8696;font-size:12.5px;margin-top:36px;
-  overflow-wrap:anywhere;padding:0 8px;
+  text-align:center;color:#7d8da3;font-size:12.5px;margin-top:40px;
+  padding:20px 8px 0;border-top:1px solid rgba(201,168,76,.2);
+  overflow-wrap:anywhere;
 }
-footer a{color:var(--acc);text-decoration:none}
-footer a:hover{text-decoration:underline}
+footer a{color:var(--gold)}
 
-@media (max-width:560px){
-  .nav{padding:10px 12px;gap:6px 4px}
+@media (max-width:600px){
+  .nav{padding:8px 10px;gap:4px}
   .nav a{padding:5px 8px;font-size:12px}
-  main{padding:20px 14px 56px}
-  .card{padding:18px 16px;border-radius:18px}
-  .gallery img{height:200px}
+  main{padding:0 12px 64px}
+  section.panel{padding:18px 16px;border-radius:4px 12px 12px 4px}
+  .gallery img{height:190px}
+  .hero{padding:24px 0 20px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -186,18 +256,22 @@ footer a:hover{text-decoration:underline}
 <nav class="nav" aria-label="Page">
   <a class="home" href="../">← Hub home</a>
   <span class="spacer"></span>
+  <a href="#platform">Platform</a>
   <a href="#summary">Summary</a>
   <a href="#charts">Charts</a>
   <a href="#imagery">Imagery</a>
-  <a href="#latest">Latest</a>
+  <a href="#actions">Actions</a>
 </nav>
 
 <main>
   <header class="hero">
-    <div class="badge"><i></i> Live X Chat recap</div>
+    <img class="hero-banner" src="assets/america-first-banner.png" width="1500" height="500" alt="America First Party banner with eagle emblem">
+    <img class="hero-eagle" src="assets/america-party-eagle-web.png" width="1200" height="1200" alt="The America Party eagle emblem">
+    <div class="badge"><i></i> Officers X Chat recap</div>
     <div class="stripe" aria-hidden="true"><span></span><span></span><span></span></div>
-    <h1>America Party Officers</h1>
-    <p class="sub">A clean recap of the brand-new America Party Officers X Chat group — conversation summary, charts, and imagery shared in-thread.</p>
+    <h1>America Party</h1>
+    <p class="kicker">Officers group · conversation &amp; platform draft</p>
+    <p class="sub">A clean, sharp hub for the America Party Officers X Chat — branding, platform draft for discussion, session summary, charts, and imagery shared in-thread.</p>
     <div class="meta">
       <span class="chip">Thu Nov 5, 2026 · <strong>11:28 AM–3:13 PM ET</strong></span>
       <span class="chip"><strong>146</strong> events</span>
@@ -205,11 +279,94 @@ footer a:hover{text-decoration:underline}
     </div>
   </header>
 
-  <section class="card" id="summary">
-    <h3 class="h">Summary</h3>
-    <p>America Party Officers is a brand-new X Chat group Ben (<a href="https://x.com/TeslaFamBen" style="color:var(--acc)">@TeslaFamBen</a>) spun up Thu Nov 5, 2026 (about 11:28 AM–3:13 PM ET). Full thread read: <strong>146</strong> decrypted events, <strong>81</strong> substantive posts. Tone: energetic and collaborative.</p>
-    <p>Ben welcomed everyone; Tim (<a href="https://x.com/RetiredYoungNW" style="color:var(--acc)">@RetiredYoungNW</a>) and Devo (<a href="https://x.com/DevoFlyer" style="color:var(--acc)">@DevoFlyer</a>) jumped in; Tom (<a href="https://x.com/TitaniumTomP" style="color:var(--acc)">@TitaniumTomP</a>) pressed for short-term goals before mass invites; Jason (<a href="https://x.com/bauminater" style="color:var(--acc)">@bauminater</a>) is an admin but hadn’t posted yet; Grok was added mid-afternoon.</p>
-    <h2>Main threads</h2>
+  <section class="panel" id="platform">
+    <span class="eyebrow">Platform draft</span>
+    <h2>Ten planks under discussion</h2>
+    <p class="lede">A working draft of ten planks, with each core idea kept separate from proposed wording. Sourced from the shared America First platform draft for revision inside the officers group.</p>
+    <div class="notice" role="note">
+      <strong>Draft, not adopted.</strong> A work in progress for discussion and revision. These positions have not been formally adopted.
+    </div>
+    <div class="planks">
+      <article class="plank">
+        <h3>1. Closed borders</h3>
+        <span class="label">Core idea</span>
+        <p class="core">Closed borders. Specific mechanisms are not yet decided.</p>
+        <span class="label">Proposed wording</span>
+        <p class="wording">We decide who comes into this country. The law at the border should be enforced, and coming in illegally should stop. How we do that will be spelled out as the platform develops.</p>
+      </article>
+      <article class="plank">
+        <h3>2. Balanced budgets</h3>
+        <span class="label">Core idea</span>
+        <p class="core">Balanced budgets. Specific mechanisms are not yet decided.</p>
+        <span class="label">Proposed wording</span>
+        <p class="wording">Families can't spend more than they take in forever, and neither should Washington. We will work to balance the federal budget and keep it balanced. The specific steps will be spelled out as the platform develops.</p>
+      </article>
+      <article class="plank">
+        <h3>3. Jobs for Americans</h3>
+        <span class="label">Core idea</span>
+        <p class="core">Jobs for Americans. Specific mechanisms are not yet decided.</p>
+        <span class="label">Proposed wording</span>
+        <p class="wording">Work in this country should go to Americans, and a job should pay enough to support a family. We want good jobs built and kept here. The specific policies will be spelled out as the platform develops.</p>
+      </article>
+      <article class="plank">
+        <h3>4. Energy</h3>
+        <span class="label">Core idea</span>
+        <p class="core">Accelerate the transition to carbon-free power through nuclear and solar, recognize the economy runs on carbon-based fuels right now, and build more refining capacity during the transition.</p>
+        <span class="label">Proposed wording</span>
+        <p class="wording">We want to speed up the move to carbon-free power, with nuclear and solar leading the way. Our economy depends on oil, gas, and other fossil fuels today, so the transition has to be honest about that. While we make the change, we need more refining capacity, not less, so fuel stays available and affordable.</p>
+      </article>
+      <article class="plank">
+        <h3>5. Law and order</h3>
+        <span class="label">Core idea</span>
+        <p class="core">We are a law and order party, and criminals should be in jail.</p>
+        <span class="label">Proposed wording</span>
+        <p class="wording">We are a law and order party. Laws should be enforced. People convicted of crimes, after a fair trial and due process, should serve their time in jail.</p>
+      </article>
+      <article class="plank">
+        <h3>6. Taxes</h3>
+        <span class="label">Core idea</span>
+        <p class="core">A national sales tax with food and medicine exempt. A consumption-based system using a national sales tax, with the aim that people who spend more, including wealthy consumers, pay more tax on that spending. The rate and which current taxes it would replace are not yet decided.</p>
+        <span class="label">Proposed wording</span>
+        <p class="wording">We want a tax system based on what people buy, through a national sales tax. Food and medicine would not be taxed. Our aim is that people who spend more pay more on that spending. The rate, and which of today's taxes it replaces, will be spelled out as the platform develops.</p>
+      </article>
+      <article class="plank">
+        <h3>7. Abortion</h3>
+        <span class="label">Core idea</span>
+        <p class="core">Abortion is a state's right issue.</p>
+        <span class="label">Proposed wording</span>
+        <p class="wording">Abortion policy should be decided by each state, not by Washington.</p>
+      </article>
+      <article class="plank">
+        <h3>8. Lobbying after Congress</h3>
+        <span class="label">Core idea</span>
+        <p class="core">For members of Congress, a 10-year restriction from the time they leave office to the time they can lobby for other companies.</p>
+        <span class="label">Proposed wording</span>
+        <p class="wording">Members of Congress should face a 10-year restriction from the time they leave office to the time they can lobby for other companies.</p>
+      </article>
+      <article class="plank">
+        <h3>9. Congressional term limits</h3>
+        <span class="label">Core idea</span>
+        <p class="core">Two terms per chamber: two terms in the Senate and two terms in the House of Representatives.</p>
+        <span class="label">Proposed wording</span>
+        <p class="wording">We support a limit of two terms in the Senate and two terms in the House of Representatives. How these limits would take effect will be spelled out as the platform develops.</p>
+      </article>
+      <article class="plank">
+        <h3>10. Innovation, technology, and manufacturing</h3>
+        <span class="label">Core idea</span>
+        <p class="core">Plan for and embrace the future. Innovation and technology should pave the way for America to lead the world across fields, including manufacturing.</p>
+        <span class="label">Proposed wording</span>
+        <p class="wording">We will plan for the future and embrace innovation and technology. We want America to develop new technologies, put them to work, and lead the world across industries and fields, including manufacturing. Building the future should mean making things in America and preparing Americans for the work ahead.</p>
+      </article>
+    </div>
+    <p class="source-note">Source: <a href="https://america-first-platform-draft-3yrc.pages.grok.bot/" rel="noopener">America First platform draft</a> · for discussion and revision only.</p>
+  </section>
+
+  <section class="panel" id="summary">
+    <span class="eyebrow">Officers chat</span>
+    <h2>Session summary</h2>
+    <p class="lede">America Party Officers is a brand-new X Chat group Ben (<a href="https://x.com/TeslaFamBen">@TeslaFamBen</a>) spun up Thu Nov 5, 2026 (about 11:28 AM–3:13 PM ET). Full thread read: <strong>146</strong> decrypted events, <strong>81</strong> substantive posts. Tone: energetic and collaborative.</p>
+    <p>Ben welcomed everyone; Tim (<a href="https://x.com/RetiredYoungNW">@RetiredYoungNW</a>) and Devo (<a href="https://x.com/DevoFlyer">@DevoFlyer</a>) jumped in; Tom (<a href="https://x.com/TitaniumTomP">@TitaniumTomP</a>) pressed for short-term goals before mass invites; Jason (<a href="https://x.com/bauminater">@bauminater</a>) is an admin but hadn’t posted yet; Grok was added mid-afternoon.</p>
+    <h2 style="font-size:1.25rem;margin-top:18px">Main threads</h2>
     <ul class="threads">
       <li><strong>Formation &amp; roles</strong><span>DJ stays on the sidelines as a registered lobbyist; debated inviting Jen (@j_grieshaber); admins granted to Tom, Tim, Jason, and Devo.</span></li>
       <li><strong>Branding</strong><span>Temporary Cybertruck-style header; Tim shared logo/header designs; uniting language vs. “First”/MAGA associations; handle @AmericaParty4U; slogan ideas like “The party that brings people together.”</span></li>
@@ -218,10 +375,11 @@ footer a:hover{text-decoration:underline}
     </ul>
   </section>
 
-  <section class="card" id="charts">
-    <h3 class="h">Charts</h3>
+  <section class="panel" id="charts">
+    <span class="eyebrow">Data</span>
+    <h2>Charts</h2>
     <p class="mut">Activity from the first session of the officers group.</p>
-    <div class="charts">
+    <div class="charts grid-2">
       <figure class="chart">
         <img src="assets/activity.png" alt="Activity over time chart for America Party Officers chat" loading="lazy" width="800" height="450">
         <figcaption>Activity over time — posts across the Nov 5 afternoon session (ET)</figcaption>
@@ -237,27 +395,37 @@ footer a:hover{text-decoration:underline}
     </div>
   </section>
 
-  <section class="card" id="imagery">
-    <h3 class="h">Imagery from chat</h3>
-    <p class="mut">Designs and screenshots shared in the officers group. Credits under each.</p>
+  <section class="panel" id="imagery">
+    <span class="eyebrow">Visuals</span>
+    <h2>Branding &amp; chat imagery</h2>
+    <p class="mut">Brand graphics plus designs and screenshots shared in the officers group. Credits under each.</p>
     <div class="gallery">
+      <figure class="wide" style="grid-column:1/-1">
+        <img src="assets/america-first-banner.png" alt="America First Party wide banner" loading="lazy">
+        <figcaption><strong>America First Party banner</strong>Brand graphic · uploaded for the hub</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/america-party-eagle-web.png" alt="The America Party eagle emblem" loading="lazy">
+        <figcaption><strong>America Party eagle</strong>Brand emblem · uploaded for the hub</figcaption>
+      </figure>
       <figure>
         <img src="assets/logo-1.jpg" alt="America Party logo design concept 1 by Tim" loading="lazy">
-        <figcaption><strong>Logo design 1</strong>Shared by Tim · <a href="https://x.com/RetiredYoungNW" style="color:var(--acc)">@RetiredYoungNW</a></figcaption>
+        <figcaption><strong>Logo design 1</strong>Shared by Tim · <a href="https://x.com/RetiredYoungNW">@RetiredYoungNW</a></figcaption>
       </figure>
       <figure>
         <img src="assets/logo-2.jpg" alt="America Party logo design concept 2 by Tim" loading="lazy">
-        <figcaption><strong>Logo design 2</strong>Shared by Tim · <a href="https://x.com/RetiredYoungNW" style="color:var(--acc)">@RetiredYoungNW</a></figcaption>
+        <figcaption><strong>Logo design 2</strong>Shared by Tim · <a href="https://x.com/RetiredYoungNW">@RetiredYoungNW</a></figcaption>
       </figure>
       <figure>
         <img src="assets/verification.jpg" alt="Verification pending screenshot shared by Ben" loading="lazy">
-        <figcaption><strong>Verification pending</strong>Shared by Ben · <a href="https://x.com/TeslaFamBen" style="color:var(--acc)">@TeslaFamBen</a></figcaption>
+        <figcaption><strong>Verification pending</strong>Shared by Ben · <a href="https://x.com/TeslaFamBen">@TeslaFamBen</a></figcaption>
       </figure>
     </div>
   </section>
 
-  <section class="card" id="latest">
-    <h3 class="h">Latest · Action items</h3>
+  <section class="panel" id="actions">
+    <span class="eyebrow">Next steps</span>
+    <h2>Action items</h2>
     <ul class="actions">
       <li>Hold off on mass invites until a short-term plan exists.</li>
       <li>Tim drafting logos, headers, and a charter.</li>
@@ -271,7 +439,7 @@ footer a:hover{text-decoration:underline}
   <footer>
     © Tom · <a href="https://x.com/TitaniumTomP">@TitaniumTomP</a> ·
     <a href="https://titaniumtomp.github.io/">titaniumtomp.github.io</a> ·
-    Recap built for the America Party Officers group
+    Recap for the America Party Officers group · Platform draft not adopted
   </footer>
 </main>
 </body>
