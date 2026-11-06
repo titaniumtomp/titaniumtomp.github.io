@@ -13,7 +13,15 @@
 --disp:"Archivo Black","Archivo",system-ui,sans-serif;--sans:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{margin:0;color:var(--ink);font:16px/1.65 var(--sans);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(60% 45% at 85% -10%,rgba(225,29,63,.22),transparent 70%),radial-gradient(50% 40% at 0% 30%,rgba(59,108,255,.16),transparent 70%),linear-gradient(180deg,var(--bg),var(--bg2))}
+.flag-bg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;background:#060d1c}
+.flag-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;transform:scale(1.04);opacity:.58;filter:saturate(1.05) contrast(1.05)}
+.flag-veil{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(6,13,28,.42) 0%,rgba(6,13,28,.58) 35%,rgba(6,13,28,.78) 100%),
+    radial-gradient(60% 45% at 85% -10%,rgba(225,29,63,.14),transparent 70%),
+    radial-gradient(50% 40% at 0% 30%,rgba(59,108,255,.12),transparent 70%)}
+@media(max-width:600px){.flag-bg video{object-position:center 32%;opacity:.5}}
+@media(prefers-reduced-motion:reduce){.flag-bg video{display:none}.flag-bg{background:#060d1c url(assets/usa-flag-wave-poster.jpg) center 40%/cover no-repeat}.flag-veil{background:linear-gradient(180deg,rgba(6,13,28,.55),rgba(6,13,28,.82))}}
 a{color:var(--red2);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:3px}
 .nav{position:sticky;top:0;z-index:50;background:rgba(6,13,28,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav-in{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:10px 20px;flex-wrap:wrap}
@@ -94,6 +102,12 @@ footer::before{content:"";display:block;width:90px;height:4px;margin:0 auto 18px
 </style>
 </head>
 <body id="top">
+<div class="flag-bg" aria-hidden="true">
+  <video autoplay muted loop playsinline preload="metadata" poster="assets/usa-flag-wave-poster.jpg">
+    <source src="assets/usa-flag-wave.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="flag-veil" aria-hidden="true"></div>
 <nav class="nav" aria-label="Page"><div class="nav-in">
   <a class="brand" href="#top"><img src="assets/america-party-eagle-web.png" alt="" width="34" height="34"><span>America Party</span></a>
   <a class="l" href="#platform">Platform</a><a class="l" href="#summary">Summary</a><a class="l" href="#charts">Charts</a><a class="l" href="#imagery">Imagery</a><a class="l cta" href="#actions">Actions</a>
@@ -281,7 +295,8 @@ footer::before{content:"";display:block;width:90px;height:4px;margin:0 auto 18px
   <footer>
     © Tom · <a href="https://x.com/TitaniumTomP">@TitaniumTomP</a> ·
     <a href="https://titaniumtomp.github.io/">titaniumtomp.github.io</a> ·
-    Recap for the America Party Officers group · Platform draft not adopted
+    Recap for the America Party Officers group · Platform draft not adopted<br>
+    Background: American flag video by JohnSalvatore via <a href="https://pixabay.com/videos/american-flag-3415/">Pixabay</a> (CC0)
   </footer>
 </main>
 <script>(()=>{const e=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){e.forEach(x=>x.classList.add('in'));return}const o=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');o.unobserve(x.target)}}),{threshold:.08});e.forEach(x=>o.observe(x))})();</script>
